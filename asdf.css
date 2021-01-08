@@ -6,6 +6,7 @@
   --color-link-hsl: 211, 61%, 43%;
   --color-link: hsl(var(--color-link-hsl));
   --color-blank: #fff;
+  --color-code: #ddd;
 
   --font-family-sans-serif: sans-serif;
   --font-family-serif: serif;
@@ -50,7 +51,7 @@ a {
 a:link,
 a:visited {
   color: var(--color-link);
-  box-shadow: inset 0 -0.25rem hsla(var(--color-link-hsl), var(--shadow-opacity));
+  box-shadow: inset 0 -0.25em hsla(var(--color-link-hsl), var(--shadow-opacity));
 }
 
 a:hover,
@@ -73,6 +74,9 @@ h4,
 h5,
 h6,
 article,
+details,
+summary,
+pre,
 ul {
   margin-bottom: var(--indent-bottom);
   margin-right: var(--indent-right);
@@ -113,7 +117,8 @@ article {
   border-radius: calc(var(--unit-px) * 0.5);
 }
 
-ul {
+ul,
+pre {
   margin-top: 0;
 }
 
@@ -138,12 +143,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: calc(var(--unit-px) * 1.5);
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   line-height: calc(var(--unit-px) * 1.5);
 }
 
@@ -194,4 +199,15 @@ nav ul {
 nav ul li {
   margin-right: var(--unit-px);
   display: inline;
+}
+
+code {
+  background: var(--color-code);
+  border-radius: 0.25em;
+  padding: 0 0.25em;
+}
+
+pre code {
+  display: block;
+  white-space: pre-wrap;
 }
